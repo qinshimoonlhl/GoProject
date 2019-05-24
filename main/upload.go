@@ -123,7 +123,7 @@ func upload(rw http.ResponseWriter, request *http.Request) {
 		defer file.Close()
 		fmt.Fprintln(rw, "%v", handler.Header)
 		//根据指定的位置打开指定的文件
-		fmt.Println("./test/" + handler.Filename)
+		fmt.Println("./main/" + handler.Filename)
 		f, err := os.OpenFile("./main/"+handler.Filename, os.O_WRONLY|os.O_CREATE, 0666)
 		if err != nil {
 			fmt.Println(err)
